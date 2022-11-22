@@ -1,0 +1,1074 @@
+Learn about Flask after this
+
+Don't be afraid to ask doubts
+
+What is a programming language?
+Conditional, input output, storing data, can make any program in the world
+
+HTML,yaml,xml is a markup language
+Markup languages provide a child-parent relationships
+
+Procedural Language - Doesn't provide data hiring
+Functional Language - Functions are treated as First Class Citizens
+Object Oriented Program - Blocks, classes
+
+Different languages can be of different types
+
+Primitives: int, bool, float , char
+Objects: human
+
+IN PYTHON EVERYTHING IS AN OBJECT
+
+Class:Named group of properties and functions
+
+Primitives are also considered as objects
+
+OOP - Inheritance - Parent classes properties are taken by the child class
+
+Every class in python inherits the object class
+
+Dynamic vs Static Languages
+
+int a=10;
+a="Saarthak"
+
+Error would be given, type checking would be done
+Left: Compile time
+Right: Run time (Memory allocated in RAM)
+
+Python: Type determined at run time
+
+When compile program , it is going to type check, if it finds a value of some other type the compilation would fail
+Runtime: When program has compiled and when running, value would be stored in form of binary in RAM and varName would point to it
+
+Above Static
+
+Dynamic
+
+Type at Runtime
+
+We will be using Jupyterlab
+
+Python host would be running on own machine but the interface that python is providing would be run in browser
+
+We can use Jupyter lab by downloading it , and then typing 
+
+jupyter lab
+
+in the terminal , it would create a web server for us where we can run our various commands line by line
+
+Python kernel is running on my machine only but the UI/Interface would be through the browser
+
+Shift + Enter to run the command
+
+# - Comment
+
+a=10
+
+a is point to a value of 10
+
+a=10
+a="Saarthak"
+
+Same variable pointing towards 10 and then after that pointing to "Saarthak"
+Above can only happen in dynamic languages
+print()
+type()
+
+2 types of memory allocation:
+
+Stack
+Heap
+
+Stack : Reference variable stored
+Heap: Object stored
+
+Things actually in RAM, is in heap in binary form
+
+New object is created named Saarthak, no reference variable is pointing to 10 , hence it is removed from RAM during garbage collection
+
+More than one references can point to the same object
+
+If 
+
+a=10
+b=10
+a==b : True
+a is b : True
+
+== : Compares values
+is : Compares references
+
+Totally depends on Python, if it wants to make a new object for the same value or keep the old object and point the new reference to it
+
+Example:
+
+-6 to 256 reserved, same object is being pointed to
+These values are reserved because they are used frequently, make programs more efficient and fast
+
+Now,
+
+a=4555
+b=4555
+
+a==b : True
+a is b: False
+
+float
+
+Size of int in Python : 4 bytes = 32 bits(In other programming languages)
+Size of int in Python is actually how much RAM is in your computer
+Python is slow as compared to other langauges like C++
+But good for research as hides complexity and research
+Slow because integer is variable size, 
+if size fixed: +,- etc will take constant time
+if size not fixed: will take variable time
+First bit is resolved
+2 raised to the power of 32 numbers can be stored
+Easy to read code
+Also slow because dynamic memory allocation
+
+** Means power
+
+numpy is using with Machine Learning
+
+Python is written in C++
+cPython
+jithon : Python written in java
+
+Strongly Typed And Loosely Typed Languages
+
+Strongly: Python
+Loosely: C
+
+If I am performing type checking while performing a function on two or more variables: Strongly
+
+// Floor Division
+
+
+Datatypes
+
+Mutable:Can change the values
+Immutable: Cannot change the values
+
+array: Homogeneous : Single Datatype
+list: Heterogeous: Multiple datatypes
+
+arr[-1] : First element from behind
+
+list []
+tuple () : Immutable: Values cannot be change
+Due to security, if you are able to change the value of one reference variable from other one , it is bad for security
+
+But we can assign another value to the reference pointing to the tuple
+
+Mutable items within a tuple can be changed
+
+Sets Datatype : Same thing as in Maths
+
+Unique collection of elements
+Duplicate not allowed
+Unordered, jumbled
+
+Dictionaries:
+
+It has a key : value pair
+
+dictionary = {"mango":"King of fruits"}
+
+dict : Keyword in python
+
+Caution pool is a collection of objects which is in the heap memory
+
+a="Saarthak"
+b="Saarthak"
+
+Both of these would lie in pool of strings and python would decide if we have to take common or separate objects for the reference variables
+
+d[key]=value
+
+Keys should be unique
+
+List, Sets and Dictionaries : Immutable in python
+
+String is a list of characters
+
+So methods on lists , could be used on strings
+
+a[::] => Slicing through the string
+End is excluded
+
+a[-1::-1] : Reverse a list
+
+Conditionals:
+
+if 
+elif
+else
+
+0,empty list means false
+Any other number is true
+
+Take care of indentation
+
+Loops
+
+For loops : Used to iterate over iterators
+Iterator : Anything over which you can iterate
+
+a=[1,2,3]
+for num in a:
+	print(num)
+
+Strings are also iterable
+
+Using index in for loops in python
+
+Use enumerate function : Iterate over iterator and also get index
+
+for index,ch in enumerate(a):
+	print(index,a[index],ch)
+
+Here index,ch : This is known as tupling
+
+a,b=b,a : To swap values
+
+Here, first tuple is being created for b,a , then this value is assigned is assigned to a,b
+
+Internal Working:
+
+1. Tuple is formed
+2. Values are distributed
+
+While loops:
+
+range(start:stop:end)
+Can also typecast to list
+
+Using for loops with lists:
+(List Comprehension)
+
+l=[i for i in range(1,5)]
+
+List comprehension : For more quality and readable code
+
+Can also nest lists
+
+len() : Gives length of iterator
+
+end : It is a parameter in print statment to end a line with a specific character
+
+numpy : To make the calculation part easy for us
+
+1 To 10 List in one line of code
+
+table=[[a*b for a in range(1,11)] for b in range(1,11)]
+
+break : Used to break out of the loop
+continue : To skip that iteration
+
+for else statement:
+
+If break not provided, else is runned
+If break is provided,else case would not run
+
+for expression:
+	something
+else:
+	something
+
+
+Functions:
+
+Collections of program
+To avoid redundancy of code
+
+DRY : Don't repeat yourself
+Remove duplication and swap with funciton
+
+def name(para):
+	body
+	return type
+
+If there are no return types, the function returns none
+
+Functional Programming: Functions are first class citizens , functions are treated as variables
+
+Everything is an object => Function is also an object
+
+Lambda Function : If your function body is small, use inline/lambda function
+
+def add(a,b):
+	return a + b
+
+function_name = lambda parameters: expression
+
+If lambda function is huge, don't use it
+
+Note: If you want to know what a function does in Python on Jupyter Labs , just type the name of the function followed by a ?
+
+Like
+
+func_Name?
+
+Map Function :  Applies a given function to each element of iterable
+ 
+map(function, iterable) and then convert it to list
+
+Filter function : To filter out elements in an iterable
+
+Here, function returns a boolean value 
+
+filter(function, iterable)
+
+#comments : Interpreter ignores the comments
+Multiline comments=> Actually multi line strings : """ """
+
+pass: When you want to declare a function but not give it any body
+Multi line strings are processed by the compiler
+
+Everything is object, even classes
+
+Every class inherits the object class
+
+Interpreter gives error when function is empty
+
+is(a,object) :To check if a is an object of object class
+
+
+
+Can also install Anaconda
+
+Environment variables
+
+where python3
+
+Search in $PATH environment variable to run commands in the terminal
+
+
+
+In build function in python
+
+List. + tab to get a list of functions with definitions
+
+L.insert()
+L.remove()
+
+. + tab : To get a list of functions
+
+
+Taking inputs in python : We use the input() function , by default in a string
+Takes input from standard stream which is keyboard
+
+Concatination: Str1 + Str2
+
+We can also typecast 
+
+int(string), etc.
+
+int(input())
+
+
+Methods which are frequently used:
+
+split
+strip
+join
+
+a.strip() : To remove any extra spaces on left and right
+a.split() : Splits elements according to regex that I provide and then create it into a list
+
+a.split(" ")
+
+num1,num2 = [2,3]
+num1 would be 2 and num2 would be 3
+Same as tuple logic
+
+print(a,b) 
+sep: The separator attribute tells us what would be replaced instead of comma when the print function is executed
+
+String Formatting
+
+print("Two numbers are ",a,"and",b)
+
+This can be replaced with 
+
+print("Two numbers are {} and {}".format(a,b))
+
+{} : Called a place holder
+
+f Strings:
+
+print(f"The two numbers are {a} and {b}")
+
+
+join:
+
+If there is a list of strings and we have to concatenate those strings along with some separator we use the join method
+
+"separator".join(list)
+
+
+
+Object Oriented Programming
+
+Divide your program into parts or blocks
+
+Analogoues to LinkedList
+
+Node pointing to next node and so on...
+
+The whole class/structure is known as LinkedList Class and individual boxes/nodes have a node class
+
+The above example shows what exactly a linkedlist represents and how classes and objects help in that
+
+Human is a class and we all are objects
+
+Class : Named group of properties and functions
+
+Provides Abstraction, Encapsulation , Polymorphism and Inheritance
+
+
+Suppose you have car, you put a key in and it starts the car
+
+Internally , how it managed to start the car, we don't need to know , the complexity is hidden to us
+
+This hiding of complexity is called Abstraction using functions
+
+At design level , abstraction using functions
+
+Encapsulation:
+
+Building of data into a single entity/class/objects
+
+Classes provide a way to make a template
+
+Data is bundled at the implementation level
+
+Fitting is known as encapsulation
+
+
+
+Polymorphism:
+
+Many ways
+Act of representing a single thing in multiple ways
+
+It contains overriding and overloading
+
+Python does not have overloading
+
+
+Inheritence:
+
+Parents things are inherited by children
+
+
+Now let's go to the coding part
+
+simplest class
+
+
+class Human:
+	age=0
+	name="NoName"
+
+# Now making an object
+
+Saarthak=Human()
+
+Now Saarthak.age would give me 0 and so on ...
+
+
+Note: Whenever you create an object , a constructor is called by default
+Memory would be allocated , an object would be made in the heap memory , in the physical memory
+
+Constructor is a function to allocate memory to make a new object
+
+But there is no function in the class?
+We'll talk about it later
+
+
+
+Note : Any class that you create, a meta or a copy of that class is created which contains all it's attributes and methods
+
+Now , if I create an object of this class, the object has access to all the variables and references of this class
+
+Now when I try to access an attribute, first it would check for the attribute in the object and if it is not there then it would check for the attribute in the class from which the object originated
+
+Now, when change that attribute for an object, the original attribute is not changed in class but the attribute is changed in the individual object
+
+54:40 Diagram in Lecture 2 by Kunal Kushwaha Python explains the above
+
+Also, there can be some extra attributes in individual objects
+
+Meta is created in heap
+
+This process is tedious too , so what do we do ...
+
+Saarthak=Human()
+
+Saarthak.age 
+
+I would have to do this multiple times, tedious
+
+Solution:
+
+I want to assign these values when the object is created
+
+class Human:
+	def __init__(name,age): #Creating a contructor, this is created by default if no constructor is passed
+# By default , an argument would be passed into the function, and it is the object itself. If we don't put any parameters while defining the function it would give us error as 1 default argument would be passed but there is no parameter to take it
+
+By Convention , this parameter would be called self
+
+self is representing the object
+
+
+To set the values automatically
+
+class Human:
+	#This is called as overriding, this also comes under polymorphism as we are representing the init method in multiple ways
+	def __init__(self,name,age):
+		self.name=name
+		self.age=age
+		
+
+__func__ : Called magic methods, these are inbuilt in python and we are overriding their functionality
+
+Now we can 
+
+Human("Saarthak",19)
+
+All attributes are being made directly in object and not in the class/meta
+
+
+Function overloading is not there in python as functions are treated like objects and the reference of function is changed when we use two or more functions of the same name unlike what happens in Java
+
+There are two types of variables in Python:
+
+Class variables/Static Varible : Common for all objects of that class
+Instance Variable:Variable in object
+
+Static variables do not depend on the object
+
+Note: Do NOT access static varibles via objects
+
+
+Static Methods
+
+Methods which do not depend on object, method without self keyworld, but python would put self as argument so will give error,by default self pass would be done
+
+To make it static, ie . don't pass self argument use
+
+@staticmethod : Don't pass self
+
+class Human:
+	population=0
+	def __init__(self,name,age):
+		self.age=age
+		self.name=name
+
+		Human.population+=1
+	@staticmethod # This is called a Decorator, used to modify behaviour of a function , we will see this in detail in future webinars
+	def fun():
+		print(Human.population)
+
+
+In class method, in self parameter class is passed instead of object
+
+@classmethod
+
+Difference between @classmethod and @staticmethod
+
+Static : Class pe depend nahi karta
+Class method: Class value should be present
+
+We are able to compare OOP code with real life
+
+@classmethod 
+can be used to create a new object, can be used as an alternative constructor
+
+@classmethod
+#creating a constructor from string
+def fromString(class,string,age):
+	return class(string,age)
+
+apoorv= Human.fromString("Apoorv",19)
+
+@classmethod : Used to create static variables and methods, used to create objects
+
+Inheritence:
+
+class Parent:
+	f=80
+	def __init__(self,value):
+		self.value=value
+
+#Convention for inheritence is given below
+class Child(Parent):
+	#Constructor of parent class should be called as well it is mandatory
+
+class Child(Parent):
+	def __init__(self,value):
+		super().__init__(value)
+
+super() and Parent can be interchanged
+
+obj=Child(67)
+obj.f=80
+
+Child class has variable access to the Parent class
+
+After this just layers come in inheritance, sub parents etc.
+
+
+Hide Variables:(Jugaad for private variables in Python)
+
+class A:
+	def __init__(self,value):
+		self.__value=value
+
+# In python , private variables start with double underscore ie __varName
+
+Internally, python changes __value to _A__value. 
+Would be able to access this by using _A__value
+
+Jugaad se access kar pa raha hu
+
+Not really private
+
+Similarly, protected variables starts with one underscore
+
+_varName
+
+Variable can be
+
+Public: Access everywhere
+Private:Only accessible in that method or class
+Protected:Same class and child class
+
+These are access modifiers, totally depends on person writting the code, not as good as C++/Java
+
+Java is more secure than python
+
+Kunal ne book se padha tha
+
+Scoping:
+
+Functional Scoping
+Scoping in loop
+
+In a function, you can access a variable directly but you cannot change it
+
+LEGB Rule: 
+
+Local Enclosed Global Built in
+
+First checks local, then sees in enclosed(nested function), global and then built in modules
+
+locals() : Gives all local variables in python
+
+To make a variable nonlocal or global
+
+global x : To access global variables
+nonlocal x : To Access non local variables
+
+Closures: Related to Scoping
+
+def outer_func():
+	message="hi"
+	def inner_func():
+		print(message)
+
+	return inner_func
+
+my_func = outer_func() # my_func=inner_func
+
+my_func()
+
+Output:
+
+{'message':'hi'}
+hi
+
+
+Inner function is a closure which has the copy of enclosed varables even when life of outer function get's over
+	
+Criteria for closure:
+
+Nested function
+Outer function should return the nested function
+
+message here is called a free variable, variable being used in the function but is not being defined there
+
+Decoraters use closures internally
+
+Hands On is extremely important
+
+Can make an app of game.py using Flask
+
+So learn Flask
+
+
+Networking and File Handling:
+
+Modules:
+These are programs which someone else has written
+
+Many in built modules
+import random
+random.randint(1,100)
+random.choice : Takes a sequence and prints a random elements
+
+import os
+
+os module: Python provides us functionality to run terminal commands via the os module in the python code
+
+os.__file__ : To see path of file
+os. +tab OR dir(os) to see all the functions of the module
+
+Important because you don't have to memorise anything, you can just look at documents
+
+ls : os.listdir()
+os.getcwd() : pwd
+os.mkdir('Demo')
+os.rename('Something','SomethingNew')
+
+Rest of the modules you can see documentation for that
+
+
+
+We can schedule our own tasks using the os module as well
+
+
+File Handling:
+
+There is something called Context managers
+Whenever you read or write a file it is loaded in the RAM, if the file is really really large, we cannot have the entire file in the RAM, there is buffering, here memory flushing comes in
+
+Reading a file in Python: 
+
+#Use context manager like this
+
+with open("first.txt","r") as file:
+	print(file.read())
+
+
+What is context Manager?
+
+File would be loaded into RAM , suppose I read a line and cursor is at a specific point, if there is no context manager computer would try to read from that cursor when further statements are executed, if no context manager the computer would try to read the text from the file which was previously loaded into the RAM and it will try to use the cursor at the given point.
+So here we will have to flush the old file out of the RAM, it will corrupt the file, this is called a memory flushing
+We do not have to flush manually , it is done by context managers
+
+There are other files as pdf, image,etc. For that we use binary files, binary text
+
+There is also CSV, we would be doing that in Machine Learning, libraries like pandas would be used
+
+
+Use Tutorials to get a basic idea, getting started
+Then use documentation and Learn by doing
+
+Networking:
+
+Internet : Network of computer networks
+
+History Of Internet:
+Russia - Satellite
+
+ARPA
+ARPANET
+Some rules on transfer on the internet
+TCP created
+Used to communicate using command line
+Research papers, 
+
+www - World wide web (Collection of web pages linked by a hyper link) , to share these research pages to the public
+People used to manually maintain this
+Then Search engine came
+
+Communication over the internet work
+
+IP: Each device connected to the internet has an address known as the IP address
+
+ping www.google.com
+Browser wali cheese command line pe
+
+Data travels in packets, segments of bytes
+
+curl if config.me : To get computer IP address
+
+DNS : Like Phone Book
+
+32 bit IP address is in billions , still there are more devices than that, so some devices have common ip address, 
+
+internal ip address: starts with 197
+public ip address
+
+All devices have IP address same as the router, google server see router IP address
+
+Benifit, security and more devices connected
+
+Ports: Which application requested that resource
+Device: IP address
+Applications: Port Numbers
+
+1-1024 ports are reserved
+
+2 Models:
+
+OSI Model and TCP/IP model
+
+TCP is practically used
+
+Application implemented by software , where starts its journey , visible to user
+
+Client Server Model and Peer To Peer Model
+
+3 Way Handshake:
+
+HTTP works with TCP
+
+First make connection, to get data from google
+TCP and UDP are used
+TCP deals with error handling
+
+Presentation layer: Will send the data
+Encryption, encoding, abstraction, etc is done here
+
+Session : Take services of transport layer and build a service on top of it which would manage the user session
+
+Transport: To transport data, how data is going to be transmitted
+
+TCP: All data is transmitted
+UDP: All data is not transmitted
+
+TTL : Time to expire
+Error handling
+
+Network layer , takes messages in terms of packets , routers live here, routers interconnected with other routers ,and mapping is mapped in dictionary
+
+Avoid cycling etc
+
+Djikstra and Bellmann ford is used
+
+
+Data Link Layer: Allows the connected hosts to communicate
+Network data is transmitted to devices
+
+Router will decide which device to send
+Router can send finite amount of data per second , so if one person using heavy data thing, then other's internet gets slower
+
+
+P2P Network : Share till every thing get's the file
+
+Seal and pear
+
+Torent
+
+When you download a torent file from the server, after that you get a tracker , list of peers, all the people who are connected with this torent file, so when you download, some data from each of their computers would be downloaded to your computer
+
+Seal: When completed download and now they will upload
+
+
+How do we find things on the internet?
+
+First check in local repository(Dynamic Host Control Protocol DHCP)
+
+Then ask ISP
+
+Ask Root DNS servers : Main Organizations
+
+.io
+.net
+.com
+
+Have top level servers and search in their dictionaries
+
+Then when find it, it will be stored in the local repository
+
+
+Cookies: Learn about these as well
+
+HTTP is stateless,any connection I have is going to be treated as a new connection
+
+
+Go to inspect element in browser and reload the page,network stack, we see how many requests were made to load the request
+
+Basic form of HTTP request
+
+
+GET and POST method
+
+
+Response headers and request headers
+
+You send some headers and google is also going to send you some errors, stateless, treat each request as a new address, then if it is stateless, then how are we still logged in , we are due to cookies, cookies are some sort of values set on your machine or web browser set by server, done by request headers
+
+When you make a request to google.com , in the response headers it is going to give us and the browser a cookie, please set it up on your browser so that I recognize you later
+
+It can also act as a malware, third party cookies, set by the websites which you have not visited, browsers provide built in functionality to block third part cookies
+
+The curl command is basically doing a get request on the url that we have provided, it returns the html at that page
+
+Look at the downloadFile.py file to get to know how to use the above networking knowledge along with the request modules and how to add a little bit of animations
+
+
+We can also deal with the SMTP protocol, Simple Mail Transfer Protocol, it is used to send emails,
+SMTP servers are their , google has gmail servers, message to gmail servers, and when they open , gmail server will send those messages to me, those messages are in a queue in the gmail server and the email is then downloaded
+
+To learn about networking , use Firefox Network Edition
+
+ping www.google.com
+
+seq no :  Sequence in which data is being received
+64 bytes from this server
+
+Each packet has a sequence number to minimize the amount of error while transfer of data
+
+Time To Live : No. of hops which can be taken on the routers
+
+
+Can I make this time more efficient?
+No this is the best time that you can get
+
+
+Firewall : Network security system , provides some sort of rules and restrictions for people to establish a connection with you
+
+
+UDP : User Data Gram Protocol, it is a transport layer protocol that works over the network layers internet protocol , chunk mein data bhejo
+
+Your data may get delivered out of order, out of data, wrong data
+
+To see incoming traffic of UDP on your computer:
+
+tcpdump
+
+-c : For count
+
+
+In build IP addresses
+
+curl ifconfig.me : IP address which the router has given me
+
+ifconfig.me : Will show all the IP addresses my computer internally has, also going to show the Mac address
+
+IP : Identify Network
+MAC : Identifies Device
+
+ack flag : Gives acknowledgement
+
+
+Sockets: Each device has it's own IP address, MongoDB in that would be running on it's port 27017 
+
+If someone wants to access Mongodb in my device ip/port
+
+Sometimes, this application itself may have many processes running
+
+Program: MS Paint
+Process:Editing, Saving document,etc
+Threads:Most basic level of a process which can be done
+
+If there are many processes like this, the OS assigns the ports to these processes by default using DHCP, called Ephemeral ports
+
+Suppose you are creating a chat application, you need to send a data and in that we have the process of sending data, this port of sending data would be automatically be assigned by the operating system
+
+Socket : Connects your processes to the internet
+Not hardware
+It's a software
+It is a program that connects your process to the internet, you need the IP address and port , so you need a socket
+
+Application(Runned by me) has a process, this process will send the data to the socket and this socket will send the data to the internet. Similarly, the internet will send the data to the socket that apoorv has, and the socket is connected to the application that apoorv has, and apoorv will receive the message
+Socket connects your processes to the internet
+
+It is not necessary for you to have indepth knowledge on each module, you should know what and how to use the module with it's functionalities
+
+Request Module:
+
+Used to send request to browser
+Request URL : URL from which requesting in browser
+Request Method
+Status code: 
+200 - OK
+404 - Not found
+
+dir(module_name): Provides list of functions which we can use
+
+request.get : To send a get request
+request.get?
+
+You don't need to remember anything, you should know how to do it
+Understand
+
+
+Now let us look at another concept:
+
+bit.ly => We get a response => bitly.com opens
+The response at bit.ly redirects us to bitly.com
+
+result=requests.get(url,allow_redirects=False)
+
+bil.ly won't be able to redirect , just give the content that it has
+
+302: Redirect status code
+200 : okay
+
+300 series: Url directs
+301: Url permanently moved
+302: temporary redirect
+
+#Facebook Graph API
+
+Freely available, exposed api, if you provide every user id of the person , you can get their profile photo
+
+Web Scraping: Fetching data from a website, now you have it locally and now you can manipulate and use it
+
+URL:https://graph.facebook.com/fbid/picture?type=large
+
+The first fbid is 4 and then some facebook employees are there
+
+Look at pictureGet.py for getting images from facebook graph website
+
+
+Web Automation:
+
+Making web applications automated
+
+Includes:
+
+Bots
+Forms
+Click
+Automation Testing : To check cross platform and cross browser compatibility
+
+Selenium: Originally written in Java , but now available in other languages, it is open source
+
+Jab tak nahi lagta na ki woh acha hein , aur padhna chahiye tab tak interest nahi aayega
+
+Selenium is used for web automation
+
+Look at selenium.py for further reference
+
+Shift + Ctrl + C : To copy text in Ubuntu terminal
+
+
+Hashing, frequency tables
+
+map function in python returns an iterable
+
+Python helps you in competitive programming
+Python helps in handling large numbers
+
+Exception Handling:
+
+What if we want to display customized messages when encountering errors
+
+try:
+	// this code
+except Exception:
+	// exception was catched and now this code is running
+	//Exception is a class in python as starting with capital letter
+	//Can use FileNotFoundError class exception, catch only errors where files are not found
+	//There is a base class of exception that contains all the other exception classes, why would someone use FileNotFoundError instead of Exception if Exception is handling all the errors for us
+// Some errors would get ignored, as if one error found the other won't get a chance to show itself
+
